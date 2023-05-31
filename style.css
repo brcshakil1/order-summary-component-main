@@ -1,0 +1,176 @@
+/* general style */
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+
+    --ff-default: 'Red Hat Display', sans-serif;
+
+    --fs-300: 0.875rem;
+    --fs-400: 1rem;
+    --fs-500:1.5rem;
+    --fs-600: 2rem;
+
+    --fw-500: 500;
+    --fw-700: 700;
+    --fw-900: 900;
+}
+
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--ff-default);
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    font-size: var(--fs-400);
+    font-weight: var(--fw-500);
+    background-color: var(--pale-blue);
+}
+
+img, 
+svg {
+    width: 100%;
+}
+
+
+/* main card style */
+
+
+.card {
+    width: 20.31em;
+    border-radius: 1rem;
+    overflow: hidden;
+    text-align: center;
+    background-color: var(--very-pale-blue);
+}
+
+@media(min-width:50em) {
+    .card {
+        width: 28.125em;
+    }
+}
+
+.order-summary {
+    padding: 35px;
+}
+
+.order-summary > h1{
+    font-family: var(--ff-default);
+    font-size: var(--fs-500);
+    font-weight: var(--fw-700);
+    color: var(--dark-blue);
+    padding-bottom: 25px;
+}
+
+.order-summary > p{
+    font-size: var(--fs-400);
+    color: var(--desaturated-blue);
+    line-height: 1.5;
+}
+
+@media (min-width:50em) {
+    .order-summary {
+        padding: 45px;
+    }
+    .order-summary > h1{
+        font-size: var(--fs-600);
+    }
+}
+
+.plan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plan > img {
+    width: 48px;
+}
+
+.plan > .annual-plan {
+    padding: 0 65px 0 18px;
+}
+
+.annual-plan > h2{
+    font-size: var(--fs-400);
+    padding-bottom: 8px;
+}
+
+.annual-plan > p {
+    font-size: var(--fs-300);
+    color: var(--desaturated-blue);
+    text-align: left;
+}
+
+.plan > p > a {
+    color: var(--bright-blue);
+}
+
+.plan > p > a:focus,
+.plan  > p > a:hover {
+    color: hsl(245, 75%, 52%, 0.7);
+    text-decoration: none;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 35px 0;
+}
+
+@media (min-width: 50em) {
+    .buttons {
+        padding: 45px 0;
+    }
+}
+
+.buttons > .payment-btn {
+    font-size: var(--fs-400);
+    font-weight: var(--fw-700);
+    border: 0;
+    border-radius: 10px;
+    background-color: var(--bright-blue);
+    color: var(--pale-blue);
+    padding: 14px 64px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px hsl(245, 75%, 52%, 0.3);
+}
+
+.buttons > .cancel-order {
+    font-size: var(--fs-400);
+    font-weight: var(--fw-700);
+    border: 0;
+    background-color: transparent;
+    color: var(--desaturated-blue);
+    padding-top: 2rem;
+    cursor: pointer;
+}
+
+.buttons > .cancel-order:focus,
+.buttons > .cancel-order:hover {
+    color: var(--dark-blue);
+}
+
+@media (min-width: 50em) {
+    .buttons > .payment-btn {
+        padding: 14px 100px;
+    }
+}
+
+.buttons > .payment-btn:focus,
+.buttons > .payment-btn:hover  {
+    background-color: hsl(245, 75%, 52%, 0.7);
+}
